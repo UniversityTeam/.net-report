@@ -7,32 +7,383 @@
     <body class="protocol">
         <header><span id="icon" onclick="openNav()">&#9776;</span><p>Лабораторна робота №1</p></header>
 
-        <div class="sidenav">
-            <a onclick="showSubmenu('lab1_1')">1. Характеристика об'єкта автоматизації</a>
-                <div class="submenu" id="lab1_1">
-                    <a>1.1 Опис об'єкта управління</a>
-                    <a>1.2 Мета проекту</a>
-                    <a>1.3 Бізнес задачі</a>
-                    <a>1.4 Бізнес процеси</a>
-                    <a>1.5 Сценарії системи</a>
+        <div class="protocolBody">
+            <div class="sidenav">
+                <a onclick="showSubmenu('lab1_1')">1. Характеристика об'єкта автоматизації</a>
+                    <div class="submenu" id="lab1_1">
+                        <a onclick="showChapter('1_1')">1.1 Опис об'єкта управління</a>
+                        <a onclick="showChapter('1_2')">1.2 Мета проекту</a>
+                        <a onclick="showChapter('1_3')">1.3 Бізнес задачі</a>
+                        <a onclick="showChapter('1_4')">1.4 Бізнес процеси</a>
+                        <a onclick="showChapter('1_5')">1.5 Сценарії системи</a>
+                    </div>
+                <a onclick="showSubmenu('lab1_2')">2. Об’єктно-орієнтована декомпозиція предметного середовища</a>
+                    <div class="submenu" id="lab1_2">
+                        <a onclick="showChapter('2_1')">2.1 Лексичний та семантичний аналіз</a>
+                        <a onclick="showChapter('2_2')">2.2 Об’єктно-орієнтовна декомпозиція</a>
+                        <a onclick="showChapter('2_3')">2.3 Функціональні вимоги замовника</a>
+                    </div>
+                <a onclick="showChapter('3')">3. Проектування ПЗ</a>
+                <a onclick="showSubmenu('lab1_4')">4. Кодування (програмування)</a>
+                    <div class="submenu" id="lab1_4">
+                        <a onclick="showChapter('4_1')">4.1 Файлова структура</a>
+                        <a onclick="showChapter('4_2')">4.2 Специфікації методів</a>
+                    </div>
+                <a onclick="showSubmenu('lab1_5')">5. Впровадження та супроводження ПЗ</a>
+                    <div class="submenu" id="lab1_5">
+                        <a onclick="showChapter('5_1')">5.1 Посилання на проект</a>
+                        <a onclick="showChapter('5_2')">5.2 Завантаження проекту</a>
+                    </div>
+            </div>
+
+            <div class="content">
+                <div style="display: none" id="chapter1_1">
+                    <h1>Опис об'єкта управління</h1>
+                    <p>
+                        Об’єктом автоматизації є відео-хостинг.
+                        Користувач спочатку реєструється, тоді авторизується в системі.
+                        Після авторизації він може переглядати доступні у каталозі відеоматеріали, оцінювати так коментувати їх.
+                        Після кількох переглянутих відео стане доступним список рекомендацій, на основі історії переглядів.
+                        Також є можливість переглянути «випадкове» відео з доступних на сайті.
+                    </p>
+                    <p>Розширений функціонал доступний для адміністраторів сервісу, а саме:</p>
+                    <ul>
+                        <li>додавання та видалення відеоматеріалів (адміністратори та модератори);</li>
+                        <li>модерація коментарів, їх підтвердження або видалення (адміністратори та модератори);</li>
+                        <li>призначення нового адміністратора чи модератора (лише для адміністраторів);</li>
+                        <li>блокування користувачів, за образи, рекламу чи з інших відомих причин (адміністратори та модератори);</li>
+                    </ul>
                 </div>
-            <a onclick="showSubmenu('lab1_2')">2. Об’єктно-орієнтована декомпозиція предметного середовища</a>
-                <div class="submenu" id="lab1_2">
-                    <a>2.1 Лексичний та семантичний аналіз</a>
-                    <a>2.2 Об’єктно-орієнтовна декомпозиція</a>
-                    <a>2.3 Функціональні вимоги замовника</a>
+
+                <div style="display: none" id="chapter1_2">
+                    <h1>Мета проекту</h1>
+                    <p>Метою створити зручний сервіс для перегляду відео, враховуючи власні побажання та досвід схожих сайтів.</p>
+                    <ol>
+                        <li>Максимально спростити доступ користувачів до відеоматеріалів;</li>
+                        <li>Налаштування швидкого фідбеку;</li>
+                        <li>Оптимізація процесу завантаження відео (скорочення часу між завантаженням та можливістю перегляду);</li>
+                        <li>Створення простого та зрозумілого інтерфейсу.</li>
+                    </ol>
                 </div>
-            <a>3. Проектування ПЗ</a>
-            <a onclick="showSubmenu('lab1_4')">4. Кодування (програмування)</a>
-                <div class="submenu" id="lab1_4">
-                    <a>4.1 Файлова структура</a>
-                    <a>4.2 Специфікації методів</a>
+
+                <div style="display: none" id="chapter1_3">
+                    <h1>Бізнес задачі</h1>
+                        <ol>
+                            <li>Реєстрація облікового запису та авторизація користувача.</li>
+                            <li>Перегляд фільму.</li>
+                            <li>Оцінка та коментування (необов’язково).</li>
+                            <li>Створення власного списку рекомендацій.</li>
+                        </ol>
                 </div>
-            <a onclick="showSubmenu('lab1_5')">5. Впровадження та супроводження ПЗ</a>
-                <div class="submenu" id="lab1_5">
-                    <a>5.1 Посилання на проект</a>
-                    <a>5.2 Завантаження проекту</a>
+
+                <div style="display: none" id="chapter1_4">
+                    <h1>Бізнес процеси</h1>
+                        <ol>
+                            <li>Створити обліковий запис та авторизувати користувача.</li>
+                            <li>Обрати фільм для перегляду.</li>
+                            <li>Оцінити фільм та написати коментар.</li>
+                            <li>Переглянути список рекомендацій.</li>
+                        </ol>
                 </div>
+
+                <div style="display: none" id="chapter1_5">
+                    <h1>Сценарії системи</h1>
+                        <ol>
+                            <li>Незареєстрований користувач:
+                                <ul>
+                                    <li>створити обліковий запис (зареєструватись).</li>
+                                    <li>пройти авторизацію (перегляд можливий і без авторизації).</li>
+                                    <li>вибрати фільму з каталогу для перегляду.</li>
+                                    <li>переглянути список рекомендацій (за бажанням).</li>
+                                </ul>
+                            </li>
+
+                            <li>Зареєстрований користувач:
+                                <ul>
+                                    <li>вибрати фільму з каталогу для перегляду.</li>
+                                    <li>оцінити та прокоментувати фільм (необов’язково).</li>
+                                    <li>переглянути список рекомендацій (за бажанням).</li>
+                                </ul>
+                            </li>
+                        </ol>
+                </div>
+
+                <div style="display: none" id="chapter2_1">
+                    <table border="3">
+                        <caption style="font-size: 28px; padding-bottom: 5px">Таблиця іменників</caption>
+                        <tr>
+                            <th>Іменник</th>
+                            <th>Атрибутідношення до ООА</th>
+                            <th>Пояснення</th>
+                        </tr>
+                        <tr>
+                            <td>Користувач</td>
+                            <td>Атрибут</td>
+                            <td>Описує користувача</td>
+                        </tr>
+                        <tr>
+                            <td>Фільм</td>
+                            <td>Атрибут</td>
+                            <td>Описує фільм</td>
+                        </tr>
+                        <tr style="border-bottom-color: white; border-bottom-width: 5px">
+                            <td>Коментар</td>
+                            <td>Атрибут</td>
+                            <td>Описує коментар</td>
+                        </tr>
+
+                        <tr>
+                            <td>ID користувача</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут користувача</td>
+                        </tr>
+                        <tr>
+                            <td>Сесія користувача</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут користувача</td>
+                        </tr>
+                        <tr>
+                            <td>Логін</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут користувача</td>
+                        </tr>
+                        <tr>
+                            <td>Хеш-пароль</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут користувача</td>
+                        </tr>
+                        <tr>
+                            <td>Модератор</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут користувача</td>
+                        </tr>
+                        <tr style="border-bottom-color: white; border-bottom-width: 5px">
+                            <td>Адміністратор</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут користувача</td>
+                        </tr>
+
+                        <tr>
+                            <td>ID ФІЛЬМУ</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr>
+                            <td>Назва фільму</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr>
+                            <td>Рік випуска</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr>
+                            <td>Оцінка</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr>
+                            <td>Кількість оцінок</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr>
+                            <td>Перегляди</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr>
+                            <td>Постер</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr>
+                            <td>Жанр</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr>
+                            <td>Посилання на фільм</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+                        <tr style="border-bottom-color: white; border-bottom-width: 5px">
+                            <td>Тип доступу</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут фільму</td>
+                        </tr>
+
+                        <tr>
+                            <td>ID коментаря</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут коментаря</td>
+                        </tr>
+                        <tr>
+                            <td>ID користувача</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут коментаря</td>
+                        </tr>
+                        <tr>
+                            <td>ID фільму</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут коментаря</td>
+                        </tr>
+                        <tr>
+                            <td>Коментар</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут коментаря</td>
+                        </tr>
+                        <tr>
+                            <td>Підтвердження</td>
+                            <td>Атрибут</td>
+                            <td>Атрибут коментаря</td>
+                        </tr>
+
+                    </table>
+
+                    <table style="margin-top: 30px" border="3">
+                        <caption style="font-size: 28px; padding-bottom: 5px">Таблиця дієслів</caption>
+                        <tr>
+                            <th>Дієслово</th>
+                            <th>Критерій належності до класу</th>
+                        </tr>
+                        <tr>
+                            <td>Видалити фільм</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+                        <tr>
+                            <td>Ддодати фільм</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+                        <tr>
+                            <td>Залишити коментар</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+
+                        <tr>
+                            <td>Видалити коментар</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+                        <tr>
+                            <td>Оцінити</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+                        <tr>
+                            <td>Добавити модератора</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+                        <tr>
+                            <td>Добавити адміністратора</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+                        <tr>
+                            <td>Видалити користувача</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+                        <tr>
+                            <td>Показати рекомендації</td>
+                            <td>Метод класу Користувач</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="display: none" id="chapter2_2">
+                    <h1>Об'єктно-орієнтована декомпозиція предметного середовища</h1>
+                    <img height="515" width="900" src="ood.jpg">
+                </div>
+
+                <div style="display: none; text-align: center" id="chapter2_3">
+                    <h1>Діаграма прецедентів</h1>
+                    <img height="515" width="900" src="usecase.png">
+                </div>
+
+                <div style="display: none; text-align: center" id="chapter3">
+                    <h1>Проектування пз</h1>
+                    <img height="700" width="1000" src="classDiagram.jpg">
+                </div>
+
+                <div style="display: none; text-align: center" id="chapter4_1">
+                    <h1>Структура файлової системи</h1>
+                    <img height="400" width="600" src="structure1.png">
+                </div>
+
+                <div style="display: none" id="chapter4_2">
+                    <h1>Специфікація методів</h1>
+                    <table border="3">
+                        <tr>
+                            <th>Прототип функції</th>
+                            <th>Семантика функції</th>
+                            <th>Параметри</th>
+                            <th>Семантика параметрів</th>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void AddFilm() {}</td>
+                            <td>Добавлення фільму у каталог</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void RemoveFilm() {}</td>
+                            <td>Видалення фільму з каталогу</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void LeaveComment() {}</td>
+                            <td>Залишання коментаря</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void RateFilm() {}</td>
+                            <td>Оцінювання фільму</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void AddModerator() {}</td>
+                            <td>Додавання модератора</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void AddAdministrator() {}</td>
+                            <td>Додавання адміністратора</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void RemoveComment() {}</td>
+                            <td>Видалення коментаря</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void RemoveUser() {}</td>
+                            <td>Видалення користувача</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #b5a838; text-align: left">public void ShowRecommendations() {}</td>
+                            <td>Показ списку рекомендацій</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="display: none" id="chapter5_1">
+                    <h1>Посилання на проект</h1>
+                    <a href="https://github.com/UniversityTeam/filmhub-net" target="_blank">https://github.com/UniversityTeam/filmhub-net</a>
+                </div>
+
+                <div style="display: none" id="chapter5_2">
+                    <h1>Виконуваний файл</h1>
+                    <a href="Lab1.rar">Завантажити</a>
+                </div>
+            </div>
         </div>
 
     </body>

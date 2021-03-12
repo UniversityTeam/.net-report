@@ -1,8 +1,9 @@
 'use strict';
 
 const buttons = document.querySelector('.buttons');
-const numOfDone = 1;
+const numOfDone = 2;
 let submenuId;
+let chapterN;
 let menuShowed = false;
 
 for (let i = 1; i <= 9; i++) {
@@ -23,6 +24,10 @@ function showProtocol(n) {
     iframe.width = '90%';
     iframe.height = '600px';
     document.body.appendChild(iframe);
+    window.scrollBy({
+        top: 600,
+        behavior: 'smooth'
+    });
 }
 
 function showSubmenu(id) {
@@ -43,19 +48,37 @@ function showSubmenu(id) {
     submenu.style.display = 'block';
 }
 
+function showChapter(n) {
+    let chapter;
+
+    if (chapterN) {
+        chapter = document.querySelector(`#${chapterN}`);
+        chapter.style.display = 'none';
+    }
+
+    chapterN = `chapter${n}`;
+    console.log(chapterN)
+    chapter = document.querySelector(`#${chapterN}`);
+    console.log(chapter)
+    chapter.style.display = 'block';
+}
+
 function openNav() {
     menuShowed = !menuShowed;
     const sidemenu = document.querySelector('.sidenav');
     const icon = document.querySelector('#icon');
+    const content = document.querySelector('.content');
     if (menuShowed) {
         icon.innerHTML = '&times;';
         icon.style.fontSize = '36px';
         icon.style.padding = '8px 0 0 25px';
         sidemenu.style.width = '300px';
+        content.style.marginLeft = '300px';
     } else {
         icon.innerHTML = '&#9776;';
         icon.style.fontSize = '20px';
         icon.style.padding = '15px 0 0 25px';
         sidemenu.style.width = '0';
+        content.style.marginLeft = '0';
     }
 }
