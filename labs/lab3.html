@@ -1,9 +1,223 @@
 <!doctype html>
 <html lang="ua">
-    <head>
-        <link rel="stylesheet" href="../main.css">
-    </head>
-    <body class="protocol">
-        <header><p>Лабораторна робота №3</p></header>
-    </body>
+<head>
+    <link rel="stylesheet" href="../main.css">
+    <script type="text/javascript" src="../script.js" defer></script>
+</head>
+<body class="protocol">
+<header><span id="icon" onclick="openNav()">&#9776;</span><p>Лабораторна робота №3</p></header>
+
+<div class="protocolBody">
+    <div class="sidenav">
+        <a onclick="showChapter('1')">1. Тема, мета та постановка задачі лабораторної роботи №3</a>
+
+        <a onclick="showChapter('2')">2. Місце розташування проекту.Середовище розробки</a>
+
+        <a onclick="showChapter('3')">3. Класи, з описом властивостей для закритих полів</a>
+
+        <a onclick="showChapter('4')">4. Проектування структури ПЗ</a>
+
+        <a onclick="showSubmenu('lab3_5')">5. Кодування (програмування)</a>
+        <div class="submenu" id="lab3_5">
+            <a onclick="showChapter('5_1')">5.1 Файлова структура</a>
+            <a onclick="showChapter('5_2')">5.2 Програмні коди класів</a>
+            <a onclick="showChapter('5_3')">5.3 Програмний код класу Program</a>
+            <a onclick="showChapter('5_4')">5.4 Результат роботи</a>
+        </div>
+
+        <a onclick="showSubmenu('lab3_6')">6. Впровадження та супроводження ПЗ</a>
+        <div class="submenu" id="lab3_6">
+            <a onclick="showChapter('6_1')">6.1 Посилання на проект</a>
+            <a onclick="showChapter('6_2')">6.2 Завантаження проекту</a>
+        </div>
+
+        <a onclick="showChapter('7')">7. Висновки</a>
+    </div>
+
+    <div class="content">
+        <div style="display: none" id="chapter1">
+            <h1>Тема, мета і постановка задачі</h1>
+            <p>
+                <b>Тема:</b> ВИКОРИСТАННЯ ВЛАСТИВОСТЕЙ.  АВТОМАТИЧНІ ВЛАСТИВОСТІ. СКОРОЧЕНИЙ ЗАПИС ВЛАСТИВОСТЕЙ.
+
+            </p>
+            <p>
+                <b>Мета:</b> Здійснити введення та виведення даних закритих полів класів, застосовуючі методи-властивості
+            </p>
+            <p>
+                <b>Постановка задачі:</b>
+            </p>
+            <ol>
+                <li>
+                    Доповнити програмну реалізацію класів методами-властивостями класів,
+                    введення та виведення даних закритих полів класів.
+                </li>
+                <li>
+                    Протестувати програму, шляхом запуску програми, введенням та виведенням значень закритих полів.
+                </li>
+            </ol>
+        </div>
+
+        <div style="display: none" id="chapter2">
+            <h1>Місце розташування проекту</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net">Репозиторій</a>
+            <h1>Середовище розробки</h1>
+            <p>Microsoft Visual Studio</p>
+        </div>
+
+        <div style="display: none" id="chapter3">
+            <table border="3">
+                <caption style="font-size: 28px; padding-bottom: 5px">Таблиця приватних властивостей</caption>
+                <tr>
+                    <th>Клас</th>
+                    <th>Приватне поле</th>
+                    <th>Призначення</th>
+                </tr>
+                <tr>
+                    <td rowspan="6">User</td>
+                    <td>id</td>
+                    <td>Перевіряє чи число є додатнім</td>
+                </tr>
+                <tr>
+                    <td>session</td>
+                    <td>Перевіряє чи число є додатнім</td>
+                </tr>
+                <tr>
+                    <td>login</td>
+                    <td>Перевіряє чи в логіні не менше 6 символів</td>
+                </tr>
+                <tr>
+                    <td>hash</td>
+                    <td>Перевіряє чи в логіні не менше 20 символів</td>
+                </tr>
+                <tr>
+                    <td>moderator</td>
+                    <td>-</td>
+                </tr>
+                <tr style="border-bottom-color: white; border-bottom-width: 5px">
+                    <td>administrator</td>
+                    <td>-</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="9">Film</td>
+                    <td>id</td>
+                    <td>Перевіряє чи число є додатнім</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>Перевіряє чи назва фільму має не менше 1 символів і не більше 100</td>
+                </tr>
+                <tr>
+                    <td>year</td>
+                    <td>Перевіряє чи число лежить в межах від 1895 до 2022</td>
+                </tr>
+                <tr>
+                    <td>rating</td>
+                    <td>Перевіряє чи число лежить в межах від 1 до 5</td>
+                </tr>
+                <tr>
+                    <td>rating_count</td>
+                    <td>Перевіряє чи число є додатнім</td>
+                </tr>
+                <tr>
+                    <td>views</td>
+                    <td>Перевіряє чи число є додатнім</td>
+                </tr>
+                <tr>
+                    <td>poster</td>
+                    <td>Перевіряє чи назва постеру має не менше 4 символів і не більше 252</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>Перевіряє чи посилання має не менше 14 символів і не більше 250</td>
+                </tr>
+                <tr style="border-bottom-color: white; border-bottom-width: 5px">
+                    <td>free</td>
+                    <td>-</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="5">Comment</td>
+                    <td>id</td>
+                    <td>Перевіряє чи число є додатнім</td>
+                </tr>
+                <tr>
+                    <td>filmid</td>
+                    <td>Перевіряє чи число є додатнім</td>
+                </tr>
+                <tr>
+                    <td>userid</td>
+                    <td>Перевіряє чи число є додатнім</td>
+                </tr>
+                <tr>
+                    <td>textdata</td>
+                    <td>Перевіряє чи коментар має не менше 3 символів</td>
+                </tr>
+                <tr>
+                    <td>approved</td>
+                    <td>-</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div style="display: none" id="chapter4">
+            <h1>UML-діаграма</h1>
+            <img height="700" width="1000" src="Screenshots/classDiagram.jpg">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter5_1">
+            <h1>Файлова структура</h1>
+            <img height="400" width="600" src="Screenshots/structure1.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter5_2">
+            <h1>Програмні коди класів</h1>
+            <h2>Код класу User</h2>
+            <img height="600" width="800" src="Screenshots/lab3Usercode1.png">
+            <img height="600" width="800" src="Screenshots/lab3Usercode2.png">
+            <img height="600" width="800" src="Screenshots/lab3Usercode3.png">
+            <img height="600" width="800" src="Screenshots/lab3Usercode4.png">
+            <h2>Код класу Film</h2>
+            <img height="600" width="800" src="Screenshots/lab3FilmCode1.png">
+            <img height="600" width="800" src="Screenshots/lab3FilmCode2.png">
+            <img height="600" width="800" src="Screenshots/lab3FilmCode3.png">
+            <h2>Код класу Comment</h2>
+            <img height="600" width="800" src="Screenshots/lab3CommentCode1.png">
+            <img height="600" width="800" src="Screenshots/lab3CommentCode2.png">
+            <img height="600" width="800" src="Screenshots/lab3CommentCode3.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter5_3">
+            <h1>Код класу Program</h1>
+            <img height="600" width="800" src="Screenshots/lab3ProgramCode1.png">
+            <img height="300" width="800" src="Screenshots/lab3ProgramCode2.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter5_4">
+            <h1>Результат роботи</h1>
+            <img height="400" width="800" src="Screenshots/lab3Result.png">
+        </div>
+
+        <div style="display: none" id="chapter6_1">
+            <h1>Посилання на проект</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net" target="_blank">https://github.com/UniversityTeam/filmhub-net</a>
+        </div>
+
+        <div style="display: none" id="chapter6_2">
+            <h1>Виконуваний файл</h1>
+            <a href="Rars/Lab3.rar">Завантажити</a>
+        </div>
+
+        <div style="display: none" id="chapter7">
+            <h1>Висновки</h1>
+            <p>Основною метою лабораторної роботи було вивчення та реалізація методів-властивостей. В методів get та set
+                є значні переваги. За допомогою них ми можемо регулювати поведінку властивостей при проведені певних операцій
+                з ними. set задає поведінку при зміні властивості, а get при спробі отримати.</p>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
