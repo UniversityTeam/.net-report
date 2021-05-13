@@ -1,9 +1,125 @@
 <!doctype html>
 <html lang="ua">
-    <head>
-        <link rel="stylesheet" href="../main.css">
-    </head>
-    <body class="protocol">
-        <header><p>Лабораторна робота №4</p></header>
-    </body>
+<head>
+    <link rel="stylesheet" href="../main.css">
+    <script type="text/javascript" src="../script.js" defer></script>
+</head>
+<body class="protocol">
+<header><span id="icon" onclick="openNav()">&#9776;</span><p>Лабораторна робота №4</p></header>
+
+<div class="protocolBody">
+    <div class="sidenav">
+        <a onclick="showChapter('1')">1. Тема, мета та постановка задачі лабораторної роботи №3</a>
+
+        <a onclick="showChapter('2')">2. Місце розташування проекту.Середовище розробки</a>
+
+        <a onclick="showChapter('3')">3. Проектування структури ПЗ</a>
+
+        <a onclick="showSubmenu('lab4_4')">4. Кодування (програмування)</a>
+        <div class="submenu" id="lab4_4">
+            <a onclick="showChapter('4_1')">4.1 Файлова структура</a>
+            <a onclick="showChapter('4_2')">4.2 Перевантаження унарних операторів</a>
+            <a onclick="showChapter('4_3')">4.3 Перевантаження бінарних операторів</a>
+            <a onclick="showChapter('4_4')">4.4 Перевантаження логічних операторів</a>
+            <a onclick="showChapter('4_5')">4.5 Перевантаження порівняльних операторів</a>
+            <a onclick="showChapter('4_6')">4.6 Результат роботи</a>
+        </div>
+
+        <a onclick="showSubmenu('lab4_5')">5. Впровадження та супроводження ПЗ</a>
+        <div class="submenu" id="lab4_5">
+            <a onclick="showChapter('5_1')">5.1 Посилання на проект</a>
+            <a onclick="showChapter('5_2')">5.2 Завантаження проекту</a>
+        </div>
+
+        <a onclick="showChapter('6')">6. Висновки</a>
+    </div>
+
+    <div class="content">
+        <div style="display: none" id="chapter1">
+            <h1>Тема, мета і постановка задачі</h1>
+            <p>
+                <b>Тема:</b> ПЕРЕВАНТАЖЕННЯ УНАРНИХ, БІНАРНИХ, ЛОГІЧНИХ ОПЕРАТОРІВ, ОПЕРАТОРІВ ПОРІВНЯННЯ.
+            </p>
+            <p>
+                <b>Мета:</b> придбати практичні навички роботи  реалізації методів перевантаження
+                унарних, бінарних, логічних операторів, операторів порівняння.
+            </p>
+            <p>
+                <b>Постановка задачі:</b>
+            </p>
+            <ol>
+                <li>
+                    Доповнити програмну реалізацію класів методами для перевантаження унарних,
+                    бінарних, логічних операторів, операторів порівняння.
+                </li>
+                <li>
+                    Протестувати програму. Зробити висновки.
+                </li>
+            </ol>
+        </div>
+
+        <div style="display: none" id="chapter2">
+            <h1>Місце розташування проекту</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net">Репозиторій</a>
+            <h1>Середовище розробки</h1>
+            <p>Microsoft Visual Studio</p>
+        </div>
+
+        <div style="display: none" id="chapter3">
+            <h1>UML-діаграма</h1>
+            <img height="700" width="1000" src="Screenshots/classDiagram.jpg">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_1">
+            <h1>Файлова структура</h1>
+            <img height="400" width="600" src="Screenshots/structure1.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_2">
+            <h1>Перевантаження унарних операторів</h1>
+            <img height="600" width="800" src="Screenshots/lab4UnaryOverflow1.png">
+            <img height="600" width="800" src="Screenshots/lab4UnaryOverflow2.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_3">
+            <h1>Перевантаження бінарних операторів</h1>
+            <img height="400" width="800" src="Screenshots/lab4BinaryOverflow1.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_4">
+            <h1>Перевантаження логічних операторів</h1>
+            <img height="600" width="800" src="Screenshots/lab4LogicalOverflow1.png">
+            <img height="500" width="800" src="Screenshots/lab4LogicalOverflow2.png">
+            <img height="300" width="800" src="Screenshots/lab4LogicalOverflow3.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_5">
+            <h1>Перевантаження порівняльних операторів</h1>
+            <img height="600" width="800" src="Screenshots/lab4ComprasionOverflow1.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_6">
+            <h1>Результат роботи</h1>
+            <img height="750" width="400" src="Screenshots/lab4Result.png">
+        </div>
+
+        <div style="display: none" id="chapter5_1">
+            <h1>Посилання на проект</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net" target="_blank">https://github.com/UniversityTeam/filmhub-net</a>
+        </div>
+
+        <div style="display: none" id="chapter5_2">
+            <h1>Виконуваний файл</h1>
+            <a href="Rars/Lab4.rar">Завантажити</a>
+        </div>
+
+        <div style="display: none" id="chapter6">
+            <h1>Висновки</h1>
+            <p>Основною метою лабораторної роботи було вивчення та реалізація перевантаження операторів. Завдяки
+            цьому ми можемо прописувати логіку для тих чи інших операторів для нашого класу.</p>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
