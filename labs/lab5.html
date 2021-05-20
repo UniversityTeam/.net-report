@@ -1,9 +1,132 @@
 <!doctype html>
 <html lang="ua">
-    <head>
-        <link rel="stylesheet" href="../main.css">
-    </head>
-    <body class="protocol">
-        <header><p>Лабораторна робота №5</p></header>
-    </body>
+<head>
+    <link rel="stylesheet" href="../main.css">
+    <script type="text/javascript" src="../script.js" defer></script>
+</head>
+<body class="protocol">
+<header><span id="icon" onclick="openNav()">&#9776;</span><p>Лабораторна робота №5</p></header>
+
+<div class="protocolBody">
+    <div class="sidenav">
+        <a onclick="showChapter('1')">1. Тема, мета та постановка задачі лабораторної роботи №5</a>
+
+        <a onclick="showChapter('2')">2. Місце розташування проекту.Середовище розробки</a>
+
+        <a onclick="showChapter('3')">3. Проектування структури ПЗ</a>
+
+        <a onclick="showSubmenu('lab4_4')">4. Кодування (програмування)</a>
+        <div class="submenu" id="lab4_4">
+            <a onclick="showChapter('4_1')">4.1 Файлова структура</a>
+            <a onclick="showChapter('4_2')">4.2 Базові і похідні класи</a>
+            <a onclick="showChapter('4_3')">4.3 Абстрактні класи, абстрактні та віртуальні методи</a>
+            <a onclick="showChapter('4_4')">4.4 Upcasting і downcasting</a>
+            <a onclick="showChapter('4_5')">4.5 Інтерфейси. Узагальнені класи і методи.</a>
+            <a onclick="showChapter('4_6')">4.6 Результат роботи</a>
+        </div>
+
+        <a onclick="showSubmenu('lab4_5')">5. Впровадження та супроводження ПЗ</a>
+        <div class="submenu" id="lab4_5">
+            <a onclick="showChapter('5_1')">5.1 Посилання на проект</a>
+            <a onclick="showChapter('5_2')">5.2 Завантаження проекту</a>
+        </div>
+
+        <a onclick="showChapter('6')">6. Висновки</a>
+    </div>
+
+    <div class="content">
+        <div style="display: none" id="chapter1">
+            <h1>Тема, мета і постановка задачі</h1>
+            <p>
+                <b>Тема:</b> УСПАДКУВАННЯ. АБСТАКТНІ КЛАСИ. ІНТЕРФЕЙСИ.
+            </p>
+            <p>
+                <b>Мета:</b> придбати практичні навички роботи  створення базового та похідних класів,
+                перевизначення методів у класі, методів перевантаження унарних,
+                бінарних, логічних операторів, операторів порівняння.
+            </p>
+            <p>
+                <b>Постановка задачі:</b>
+            </p>
+            <ol>
+                <li>
+                    Доповнити програмну реалізацію класами-наслідниками, абстрактними класами, інтефейсами.
+                </li>
+                <li>
+                    Протестувати програму. Зробити висновки.
+                </li>
+            </ol>
+        </div>
+
+        <div style="display: none" id="chapter2">
+            <h1>Місце розташування проекту</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net">Репозиторій</a>
+            <h1>Середовище розробки</h1>
+            <p>Microsoft Visual Studio</p>
+        </div>
+
+        <div style="display: none" id="chapter3">
+            <h1>UML-діаграма</h1>
+            <img height="700" width="1000" src="Screenshots/classDiagram.jpg">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_1">
+            <h1>Файлова структура</h1>
+            <img height="400" width="300" src="Screenshots/lab5Structure.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_2">
+            <h1>Базові і похідні класи</h1>
+            <h4>Базові класи</h4>
+            <img height="600" width="800" src="Screenshots/lab5baseClass1_1.png">
+            <img height="600" width="800" src="Screenshots/lab5baseClass1_2.png">
+            <h4>Похідні класи</h4>
+            <img height="600" width="800" src="Screenshots/lab5DerClass1.png">
+            <img height="600" width="800" src="Screenshots/lab5DerClass2.png">
+            <img height="600" width="800" src="Screenshots/lab5DerClass3.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_3">
+            <h1>Абстрактні класи, абстрактні та віртуальні методи</h1>
+            <img height="500" width="500" src="Screenshots/lab5Abstract1.png">
+            <img height="500" width="500" src="Screenshots/lab5Abstract2.png">
+            <img height="300" width="500" src="Screenshots/lab5Abstract3.png">
+            <img height="400" width="800" src="Screenshots/lab5Override.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_4">
+            <h1>Upcasting і downcasting</h1>
+            <img height="350" width="650" src="Screenshots/lab5Casting.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_5">
+            <h1>Інтерфейси</h1>
+            <img height="600" width="800" src="Screenshots/lab5Interface.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter4_6">
+            <h1>Результат роботи</h1>
+            <img height="750" width="500" src="Screenshots/lab5Result.png">
+        </div>
+
+        <div style="display: none" id="chapter5_1">
+            <h1>Посилання на проект</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net" target="_blank">https://github.com/UniversityTeam/filmhub-net</a>
+        </div>
+
+        <div style="display: none" id="chapter5_2">
+            <h1>Виконуваний файл</h1>
+            <a href="Rars/Lab4.rar">Завантажити</a>
+        </div>
+
+        <div style="display: none" id="chapter6">
+            <h1>Висновки</h1>
+            <p>Основною метою лабораторної роботи було вивчення та реалізація наслідування, up/down-casting
+                та абстракрактних класів. Завдяки цьому ми можемо прописувати абстрактну сутність з загальними даними,
+                від якої далі будемо утворювати нові класи.</p>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
