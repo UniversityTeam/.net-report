@@ -1,7 +1,7 @@
 'use strict';
 
 const buttons = document.querySelector('.buttons');
-const numOfDone = 5;
+const numOfDone = 6;
 let submenuId;
 let chapterN;
 let menuShowed = false;

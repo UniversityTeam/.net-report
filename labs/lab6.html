@@ -1,9 +1,126 @@
 <!doctype html>
 <html lang="ua">
-    <head>
-        <link rel="stylesheet" href="../main.css">
-    </head>
-    <body class="protocol">
-        <header><p>Лабораторна робота №6</p></header>
-    </body>
+<head>
+    <link rel="stylesheet" href="../main.css">
+    <script type="text/javascript" src="../script.js" defer></script>
+</head>
+<body class="protocol">
+<header><span id="icon" onclick="openNav()">&#9776;</span><p>Лабораторна робота №6</p></header>
+
+<div class="protocolBody">
+    <div class="sidenav">
+        <a onclick="showChapter('1')">1. Тема, мета та постановка задачі лабораторної роботи №6</a>
+
+        <a onclick="showChapter('2')">2. Місце розташування проекту.Середовище розробки</a>
+
+        <a onclick="showSubmenu('lab6_3')">3. Кодування (програмування)</a>
+        <div class="submenu" id="lab6_3">
+            <a onclick="showChapter('3_1')">3.1 Файлова структура</a>
+            <a onclick="showChapter('3_2')">3.2 Класи делегати</a>
+            <a onclick="showChapter('3_3')">3.3 Події</a>
+            <a onclick="showChapter('3_4')">3.4 Анонімні методи</a>
+            <a onclick="showChapter('3_5')">3.5 Лямбда вирази та оператори</a>
+            <a onclick="showChapter('3_6')">3.6 Результат роботи</a>
+        </div>
+
+        <a onclick="showSubmenu('lab6_4')">4. Впровадження та супроводження ПЗ</a>
+        <div class="submenu" id="lab6_4">
+            <a onclick="showChapter('4_1')">4.1 Посилання на проект</a>
+            <a onclick="showChapter('4_2')">4.2 Завантаження проекту</a>
+        </div>
+
+        <a onclick="showChapter('5')">5. Висновки</a>
+    </div>
+
+    <div class="content">
+        <div style="display: none" id="chapter1">
+            <h1>Тема, мета і постановка задачі</h1>
+            <p>
+                <b>Тема:</b> ДЕЛЕГАТИ. ПОДІЇ. АНОНІМНІ МЕТОДИ.  ЛЯМБДА-ОПЕРАТОРИ. ЛЯМБДА-ВИРАЗИ.
+            </p>
+            <p>
+                <b>Мета:</b> придбати практичні навички роботи  створення та використання  делегатів,
+                анонімних методи,  лямбда-операторів, лямбда-виразів.
+            </p>
+            <p>
+                <b>Постановка задачі:</b>
+            </p>
+            <p>До програмного коду попередніх лабораторних робіт добавити та описати:</p>
+            <ol>
+                <li>класи-делегати (мінімум три делегата);</li>
+                <li>події;</li>
+                <li>анонімні методи;</li>
+                <li>лямбда–оператори;</li>
+                <li>лямбда–вирази;</li>
+                <li>Протестувати програму. Зробити висновки.</li>
+            </ol>
+        </div>
+
+        <div style="display: none" id="chapter2">
+            <h1>Місце розташування проекту</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net">Репозиторій</a>
+            <h1>Середовище розробки</h1>
+            <p>Microsoft Visual Studio</p>
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_1">
+            <h1>Файлова структура</h1>
+            <img height="400" width="300" src="Screenshots/lab5Structure.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_2">
+            <h1>Класи делегати</h1>
+            <h4>Class Comment</h4>
+            <img height="600" width="500" src="Screenshots/lab6Del1.png">
+            <h4>Class Film</h4>
+            <img height="300" width="800" src="Screenshots/lab6Del2.png">
+            <h4>Class Series</h4>
+            <img height="300" width="600" src="Screenshots/lab6Del3.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_3">
+            <h1>Події</h1>
+            <h4>Class User</h4>
+            <img height="600" width="500" src="Screenshots/lab6Event1.png">
+            <img height="100" width="600" src="Screenshots/lab6Event1_1.png">
+            <img height="100" width="600" src="Screenshots/lab6Event1_2.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_4">
+            <h1>Анонімні методи</h1>
+            <h4>Class Series</h4>
+            <img height="250" width="420" src="Screenshots/lab6Ann1.png">
+            <h4>Class Film</h4>
+            <img height="250" width="420" src="Screenshots/lab6Ann2.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_5">
+            <h1>Лямбда вирази та оператори</h1>
+            <img height="120" width="670" src="Screenshots/lab6Lambda1.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_6">
+            <h1>Результат роботи</h1>
+            <img height="750" width="500" src="Screenshots/lab6Result.png">
+        </div>
+
+        <div style="display: none" id="chapter4_1">
+            <h1>Посилання на проект</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net" target="_blank">https://github.com/UniversityTeam/filmhub-net</a>
+        </div>
+
+        <div style="display: none" id="chapter4_2">
+            <h1>Виконуваний файл</h1>
+            <a href="Rars/Lab6.rar">Завантажити</a>
+        </div>
+
+        <div style="display: none" id="chapter5">
+            <h1>Висновки</h1>
+            <p>Основною метою лабораторної роботи було вивчення та реалізація делагатів та подій, і взаємодія з ними.
+                Також було проведено роботу з анонімними методами, лямбда виразами та операторами.</p>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
