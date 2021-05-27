@@ -1,9 +1,130 @@
 <!doctype html>
 <html lang="ua">
-    <head>
-        <link rel="stylesheet" href="../main.css">
-    </head>
-    <body class="protocol">
-        <header><p>Лабораторна робота №7</p></header>
-    </body>
+<head>
+    <link rel="stylesheet" href="../main.css">
+    <script type="text/javascript" src="../script.js" defer></script>
+</head>
+<body class="protocol">
+<header><span id="icon" onclick="openNav()">&#9776;</span><p>Лабораторна робота №7</p></header>
+
+<div class="protocolBody">
+    <div class="sidenav">
+        <a onclick="showChapter('1')">1. Тема, мета та постановка задачі лабораторної роботи №7</a>
+
+        <a onclick="showChapter('2')">2. Місце розташування проекту.Середовище розробки</a>
+
+        <a onclick="showSubmenu('lab7_3')">3. Кодування (програмування)</a>
+        <div class="submenu" id="lab7_3">
+            <a onclick="showChapter('3_1')">3.1 Файлова структура</a>
+            <a onclick="showChapter('3_2')">3.2 Виключення при авторизації</a>
+            <a onclick="showChapter('3_3')">3.3 Фільтри виключення</a>
+            <a onclick="showChapter('3_4')">3.4 Виключення при роботі з масивами</a>
+            <a onclick="showChapter('3_5')">3.5 Системні виключення</a>
+            <a onclick="showChapter('3_6')">3.6 Власні виключення</a>
+            <a onclick="showChapter('3_7')">3.7 Результат роботи</a>
+        </div>
+
+        <a onclick="showSubmenu('lab7_4')">4. Впровадження та супроводження ПЗ</a>
+        <div class="submenu" id="lab7_4">
+            <a onclick="showChapter('4_1')">4.1 Посилання на проект</a>
+            <a onclick="showChapter('4_2')">4.2 Завантаження проекту</a>
+        </div>
+
+        <a onclick="showChapter('5')">5. Висновки</a>
+    </div>
+
+    <div class="content">
+        <div style="display: none" id="chapter1">
+            <h1>Тема, мета і постановка задачі</h1>
+            <p>
+                <b>Тема:</b> ВИКЛЮЧНІ СИТУАЦІЇ.
+            </p>
+            <p>
+                <b>Мета:</b> придбати практичні навички роботи з виключними ситуаціями,
+                    які виникають при роботі програми.
+            </p>
+            <p>
+                <b>Постановка задачі:</b>
+            </p>
+            <p>До програмного коду попередніх лабораторних робіт добавити та описати:</p>
+            <ol>
+                <li>виключення, яке можуть виникати при некоректній авторизації;</li>
+                <li>виключення, з застосуванням фільтрів виключення;</li>
+                <li>виключення, які виникають при обробці масивів ;</li>
+                <li>системні виключення;</li>
+                <li>власні виключення;</li>
+                <li>протестувати програму та зробити висновки;</li>
+            </ol>
+        </div>
+
+        <div style="display: none" id="chapter2">
+            <h1>Місце розташування проекту</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net">Репозиторій</a>
+            <h1>Середовище розробки</h1>
+            <p>Microsoft Visual Studio</p>
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_1">
+            <h1>Файлова структура</h1>
+            <img height="420" width="350" src="Screenshots/lab7Structure.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_2">
+            <h1>Виключення при авторизації</h1>
+            <h4>Метод authorization</h4>
+            <img height="300" width="800" src="Screenshots/lab7Auth.png">
+            <h4>Блок try-catch</h4>
+            <img height="370" width="400" src="Screenshots/lab7AuthTryCatch.png">
+            <h4>Результат з  try-catch</h4>
+            <img height="80" width="450" src="Screenshots/lab7AuthResultWithTC.png">
+            <h4>Результат без  try-catch</h4>
+            <img height="300" width="870" src="Screenshots/lab7AuthResultWithoutTC.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_3">
+            <h1>Фільтри виключення</h1>
+            <img height="600" width="400" src="Screenshots/lab7filters.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_4">
+            <h1>Виключення при роботі з масивами</h1>
+            <img height="800" width="650" src="Screenshots/lab7Array.png">
+            <img height="200" width="650" src="Screenshots/lab7Array1.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_5">
+            <h1>Системні виключення</h1>
+            <img height="800" width="670" src="Screenshots/lab7System.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_6">
+            <h1>Власні виключення</h1>
+            <img height="240" width="500" src="Screenshots/lab7Own1.png">
+            <img height="183" width="500" src="Screenshots/lab7Own.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_7">
+            <h1>Результат роботи</h1>
+            <img height="630" width="500" src="Screenshots/lab7Result1.png">
+            <img height="200" width="500" src="Screenshots/lab7Result2.png">
+        </div>
+
+        <div style="display: none" id="chapter4_1">
+            <h1>Посилання на проект</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net" target="_blank">https://github.com/UniversityTeam/filmhub-net</a>
+        </div>
+
+        <div style="display: none" id="chapter4_2">
+            <h1>Виконуваний файл</h1>
+            <a href="Rars/Lab7.rar">Завантажити</a>
+        </div>
+
+        <div style="display: none" id="chapter5">
+            <h1>Висновки</h1>
+            <p>Основною метою лабораторної роботи було вивчення та реалізація обробки як системних, так і власних виключень.</p>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>

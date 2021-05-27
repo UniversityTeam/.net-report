@@ -1,12 +1,12 @@
 'use strict';
 
 const buttons = document.querySelector('.buttons');
-const numOfDone = 6;
+const numOfDone = 8;
 let submenuId;
 let chapterN;
 let menuShowed = false;
 
-for (let i = 1; i <= 9; i++) {
+for (let i = 1; i <= 8; i++) {
     const btn = document.createElement('button');
     btn.innerHTML = `Лаба №${i}`;
     btn.className = 'btn';
