@@ -1,9 +1,149 @@
 <!doctype html>
 <html lang="ua">
-    <head>
-        <link rel="stylesheet" href="../main.css">
-    </head>
-    <body class="protocol">
-        <header><p>Лабораторна робота №8</p></header>
-    </body>
+<head>
+    <link rel="stylesheet" href="../main.css">
+    <script type="text/javascript" src="../script.js" defer></script>
+</head>
+<body class="protocol">
+<header><span id="icon" onclick="openNav()">&#9776;</span><p>Лабораторна робота №8</p></header>
+
+<div class="protocolBody">
+    <div class="sidenav">
+        <a onclick="showChapter('1')">1. Тема, мета та постановка задачі лабораторної роботи №8</a>
+
+        <a onclick="showChapter('2')">2. Місце розташування проекту.Середовище розробки</a>
+
+        <a onclick="showSubmenu('lab7_3')">3. Кодування (програмування)</a>
+        <div class="submenu" id="lab7_3">
+            <a onclick="showChapter('3_1')">3.1 Файлова структура</a>
+            <a onclick="showChapter('3_2')">3.2 Завдання 4_1</a>
+            <a onclick="showChapter('3_3')">3.3 Завдання 4_2</a>
+            <a onclick="showChapter('3_4')">3.4 Завдання 4_3</a>
+            <a onclick="showChapter('3_5')">3.5 Завдання 4_4</a>
+        </div>
+
+        <a onclick="showSubmenu('lab7_4')">4. Впровадження та супроводження ПЗ</a>
+        <div class="submenu" id="lab7_4">
+            <a onclick="showChapter('4_1')">4.1 Посилання на проект</a>
+            <a onclick="showChapter('4_2')">4.2 Завантаження проекту</a>
+        </div>
+
+        <a onclick="showChapter('5')">5. Висновки</a>
+    </div>
+
+    <div class="content">
+        <div style="display: none" id="chapter1">
+            <h1>Тема, мета і постановка задачі</h1>
+            <p>
+                <b>Тема:</b> ПОТОКИ.
+            </p>
+            <p>
+                <b>Мета:</b> придбати практичні навички роботи з потоками.
+            </p>
+            <p>
+                <b>Постановка задачі:</b>
+            </p>
+            <p>В окремому проекті виконати завдання:</p>
+            <ul>
+                <li>Завдання 4_1
+                    <ol>
+                        <li>Знайти  суму чисел від 1 до 100000000.</li>
+                        <li>Скопіюйте програмний код обчислення ще 2 рази.</li>
+                        <li>Визначте час виконання циклів за допомогою властивості TotalMilliseconds у об'єкта DateTime.</li>
+                        <li>Зробіть 2 додаткових потоки, в кожному з яких буде виконуватися той же цикл.</li>
+                        <li>В основному потоці закоментуйте 2 цикли, щоб залишився тільки один. Таким чином,
+                            кожен з 3-х циклів, буде виконуватися в своєму потоці.
+                        </li>
+                        <li>Визначте час виконання в цьому випадку.</li>
+                    </ol>
+                </li>
+                <li>Завдання 4_2
+                    <ol>
+                        <li>Створіть клас, конструктор якого буде як параметр приймати об'єкт файлу.</li>
+                        <li>Додайте метод, який буде зчитувати текст з файлу і повертати готовий рядок.</li>
+                        <li>Додайте метод, який буде записувати в файл переданий в параметрах рядок.</li>
+                        <li>Створіть 2 потоки, які повинні будуть одночасно записуватись в файл, використовуючи
+                            екземпляр створеного Вами класу, деякий рядок (кожен з потоків повинен спробувати
+                            записати свій рядок), а після виводити в консоль результат їх записи.
+                        </li>
+                        <li>Досягти того, щоб сталася помилка. Наприклад, потік записав «Рядок 1», а в консолі в
+                            цьому потоці вивелося «Рядок 2» через те, що в цей самий момент інший потік записав
+                            в файл «Рядок 2».
+                        </li>
+                        <li>Синхронізуйте  потоки, щоб цієї помилки більше не було.</li>
+                    </ol>
+                </li>
+                <li>Завдання 4_3
+                    <ol>
+                        <li>Зробити синхронізацію в попередній вправі, але з використанням м'ютексів.</li>
+                    </ol>
+                </li>
+                <li>Завдання 4_4
+                    <ol>
+                        <li>Візьміть за основу попередню вправу. І додайте ще 3 аналогічних існуючим потоки.</li>
+                        <li>Приберіть м'ютекси і підключіть семафор, який повинен підпускати до файлу одночасно тільки 2 потоку.</li>
+                        <li>Проаналізуйте отриману різницю в порівнянні з варіантом на м'ютекс.</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+
+        <div style="display: none" id="chapter2">
+            <h1>Місце розташування проекту</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net">Репозиторій</a>
+            <h1>Середовище розробки</h1>
+            <p>Microsoft Visual Studio</p>
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_1">
+            <h1>Файлова структура</h1>
+            <img height="360" width="350" src="Screenshots/Lab8structure.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_2">
+            <h1>Завдання 4_1</h1>
+            <img height="680" width="900" src="Screenshots/Lab8_4_1.png">
+            <img height="160" width="400" src="Screenshots/Lab8result_4_1.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_3">
+            <h1>Завдання 4_2</h1>
+            <img height="780" width="1000" src="Screenshots/Lab8_4_2(1).png">
+            <img height="600" width="900" src="Screenshots/Lab8_4_2(2).png">
+            <img height="500" width="500" src="Screenshots/Lab8result_4_2.png">
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_4">
+            <h1>Завдання 4_3</h1>
+            <img height="780" width="1000" src="Screenshots/Lab8_4_2(1).png">
+            <img height="500" width="720" src="Screenshots/Lab8_4_3.png">
+            <img height="450" width="350" src="Screenshots/Lab8result_4_3.png">
+
+        </div>
+
+        <div style="display: none; text-align: center" id="chapter3_5">
+            <h1>Завдання 4_4</h1>
+            <img height="780" width="1000" src="Screenshots/Lab8_4_4(1).png">
+            <img height="600" width="900" src="Screenshots/Lab8_4_4(2).png">
+        </div>
+
+        <div style="display: none" id="chapter4_1">
+            <h1>Посилання на проект</h1>
+            <a href="https://github.com/UniversityTeam/filmhub-net" target="_blank">https://github.com/UniversityTeam/filmhub-net</a>
+        </div>
+
+        <div style="display: none" id="chapter4_2">
+            <h1>Виконуваний файл</h1>
+            <a href="Rars/Lab8.rar">Завантажити</a>
+        </div>
+
+        <div style="display: none" id="chapter5">
+            <h1>Висновки</h1>
+            <p>Основною метою лабораторної роботи було вивчення та реалізація роботи з потоками,
+                мьютексами та семафорами.</p>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
